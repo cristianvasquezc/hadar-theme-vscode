@@ -449,14 +449,14 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
         name: 'Object Property',
         scope: ['variable.other.property', 'support.variable.property'],
         settings: {
-          foreground: p.fgPrimary,
+          foreground: p.blue,
         },
       },
       {
         name: 'Object Key (JS/TS)',
         scope: ['meta.object-literal.key'],
         settings: {
-          foreground: p.fgPrimary,
+          foreground: p.blue,
         },
       },
 

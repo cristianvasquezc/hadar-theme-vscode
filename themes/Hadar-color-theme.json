@@ -449,7 +449,7 @@
         "support.variable.property"
       ],
       "settings": {
-        "foreground": "#d7dce2"
+        "foreground": "#66D9EF"
       }
     },
     {
@@ -458,7 +458,7 @@
         "meta.object-literal.key"
       ],
       "settings": {
-        "foreground": "#d7dce2"
+        "foreground": "#66D9EF"
       }
     },
     {
