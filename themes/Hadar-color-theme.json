@@ -432,7 +432,7 @@
         "meta.definition.variable"
       ],
       "settings": {
-        "foreground": "#d7dce2"
+        "foreground": "#66D9EF"
       }
     },
     {
@@ -446,7 +446,10 @@
       "name": "Object Property",
       "scope": [
         "variable.other.property",
-        "support.variable.property"
+        "support.variable.property",
+        "variable.object.property",
+        "variable.other.object.property",
+        "variable.other.constant.property"
       ],
       "settings": {
         "foreground": "#66D9EF"
@@ -1043,5 +1046,17 @@
         "foreground": "#FD971F"
       }
     }
-  ]
+  ],
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "variable": "#66D9EF",
+    "property": "#66D9EF",
+    "parameter": "#FD971F",
+    "function": "#A6E22E",
+    "class": "#A6E22E",
+    "type": "#66D9EF",
+    "interface": "#66D9EF",
+    "variable.readonly": "#FD971F",
+    "property.readonly": "#66D9EF"
+  }
 }

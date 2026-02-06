@@ -435,7 +435,7 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
         name: 'Variable',
         scope: ['variable', 'meta.definition.variable'],
         settings: {
-          foreground: p.fgPrimary,
+          foreground: p.blue,
         },
       },
       {
@@ -447,7 +447,13 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       },
       {
         name: 'Object Property',
-        scope: ['variable.other.property', 'support.variable.property'],
+        scope: [
+          'variable.other.property',
+          'support.variable.property',
+          'variable.object.property',
+          'variable.other.object.property',
+          'variable.other.constant.property',
+        ],
         settings: {
           foreground: p.blue,
         },
@@ -1065,5 +1071,17 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
         },
       },
     ],
+    semanticHighlighting: true,
+    semanticTokenColors: {
+      variable: p.blue,
+      property: p.blue,
+      parameter: p.orange,
+      function: p.green,
+      class: p.green,
+      type: p.blue,
+      interface: p.blue,
+      'variable.readonly': p.orange,
+      'property.readonly': p.blue,
+    },
   };
 }
