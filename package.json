@@ -28,6 +28,11 @@
         "label": "Hadar",
         "uiTheme": "vs-dark",
         "path": "./themes/hadar-color-theme.json"
+      },
+      {
+        "label": "Hadar Bordered",
+        "uiTheme": "vs-dark",
+        "path": "./themes/hadar-bordered-color-theme.json"
       }
     ]
   }
