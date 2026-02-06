@@ -24,7 +24,7 @@
   "categories": [
     "Themes"
   ],
-   "keywords": [
+  "keywords": [
     "dark",
     "theme",
     "Dark Theme",
@@ -38,14 +38,19 @@
     "syntax highlighting"
   ],
   "activationEvents": [
-    "onCommand:hadar.changeTheme"
+    "onCommand:hadar.changeTheme",
+    "onCommand:hadar.switchVariant"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "hadar.changeTheme",
-        "title": "Hadar: Cambiar Color del Tema"
+        "title": "Hadar: Change Theme Color"
+      },
+      {
+        "command": "hadar.switchVariant",
+        "title": "Hadar: Switch Variant (Normal/Bordered)"
       }
     ],
     "themes": [

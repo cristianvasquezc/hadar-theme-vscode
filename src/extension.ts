@@ -95,6 +95,40 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(disposable);
+
+  let disposableSwitch = vscode.commands.registerCommand(
+    'hadar.switchVariant',
+    async () => {
+      const options: vscode.QuickPickItem[] = [
+        {
+          label: 'Hadar',
+          description: 'Standard version',
+          detail: 'Borderless, immersive experience',
+        },
+        {
+          label: 'Hadar Bordered',
+          description: 'Bordered version',
+          detail: 'With borders for better separation',
+        },
+      ];
+
+      const selection = await vscode.window.showQuickPick(options, {
+        placeHolder: 'Select Hadar Theme Variant',
+      });
+
+      if (selection) {
+        await vscode.workspace
+          .getConfiguration()
+          .update(
+            'workbench.colorTheme',
+            selection.label,
+            vscode.ConfigurationTarget.Global,
+          );
+      }
+    },
+  );
+
+  context.subscriptions.push(disposableSwitch);
 }
 
 async function updateThemeFiles(
