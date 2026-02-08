@@ -1,5 +1,3 @@
-import * as fs from 'fs';
-import * as path from 'path';
 import * as vscode from 'vscode';
 import { generateTheme as getThemeObject } from './themeGenerator';
 
@@ -7,6 +5,14 @@ export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     'hadar.changeTheme',
     async () => {
+      // Web check: fs is not available in web
+      if (vscode.env.appHost !== 'desktop') {
+        vscode.window.showInformationMessage(
+          'Theme customization is only available in VS Code Desktop.',
+        );
+        return;
+      }
+
       const options: vscode.QuickPickItem[] = [
         {
           label: 'Hadar Mint',
@@ -135,6 +141,11 @@ async function updateThemeFiles(
   context: vscode.ExtensionContext,
   color: string,
 ) {
+  // Dynamically import fs and path to avoid build errors in web
+  // This code will only run on desktop due to the check above
+  const fs = require('fs');
+  const path = require('path');
+
   // Update standard theme (borderless)
   const targetPathStandard = path.join(
     context.extensionPath,
