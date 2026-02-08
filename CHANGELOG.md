@@ -4,6 +4,13 @@ All notable changes to the "hadar-theme-vscode" extension will be documented in 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [1.0.1] - 2026-02-08
 
-- Initial release
+- Added support for VS Code Web (vscode.dev & github.dev) by including `extensionKind` in `package.json`.
+
+## [1.0.0] - 2026-02-06
+
+- Initial release of Hadar Theme.
+- Includes two high-contrast dark theme variants: "Hadar" (borderless) and "Hadar Bordered".
+- Features "Hadar: Change Theme Color" command to customize accent colors (Mint, Cherry, Golden, Lime, or Custom Hex).
+- Optimized for long coding sessions with carefully selected syntax highlighting colors.
