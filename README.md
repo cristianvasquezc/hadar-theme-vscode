@@ -7,6 +7,9 @@
       <img src="https://img.shields.io/visual-studio-marketplace/v/cristianvasquez.hadar-theme?style=flat-square&label=Version&color=00B09C" alt="Version" />
     </a>
     <a href="https://marketplace.visualstudio.com/items?itemName=cristianvasquez.hadar-theme">
+    <img alt="Visual Studio Marketplace Rating" src="https://img.shields.io/visual-studio-marketplace/stars/cristianvasquez.hadar-theme?style=flat-square">
+    </a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=cristianvasquez.hadar-theme">
       <img src="https://img.shields.io/visual-studio-marketplace/i/cristianvasquez.hadar-theme?style=flat-square&label=Installs&color=FF9F1C" alt="Installs" />
     </a>
     <a href="https://github.com/cristianvasquezc/hadar-theme-vscode/blob/main/LICENSE">
