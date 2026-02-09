@@ -19,8 +19,10 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       foreground: p.fgSecondary,
       'widget.shadow': p.bgWidget,
       'selection.background': withAlpha(p.fgSecondary, '77'),
-      descriptionForeground: p.fgSecondary,
-      errorForeground: p.error,
+      'descriptionForeground': p.fgSecondary,
+      'errorForeground': p.error,
+      'dialog.background': p.bgDark,
+      'dialog.border': p.border,
       'textBlockQuote.background': p.border,
       'textBlockQuote.border': p.border,
       'textCodeBlock.background': p.bgDark,
@@ -143,8 +145,18 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       'editor.rangeHighlightBackground': withAlpha(p.border, '44'),
       'editor.rangeHighlightBorder': withAlpha(p.fgSecondary, '55'),
       'editorWhitespace.foreground': withAlpha(p.fgSecondary, '77'),
-      'editorIndentGuide.background1': withAlpha(p.fgSecondary, '33'),
-      'editorIndentGuide.activeBackground1': withAlpha(p.fgSecondary, '55'),
+      'editorIndentGuide.background1': withAlpha(p.purple, '33'),
+      'editorIndentGuide.background2': withAlpha(p.cyan, '33'),
+      'editorIndentGuide.background3': withAlpha(p.orange, '33'),
+      'editorIndentGuide.background4': withAlpha(p.red, '33'),
+      'editorIndentGuide.background5': withAlpha(p.blue, '33'),
+      'editorIndentGuide.background6': withAlpha(p.green, '33'),
+      'editorIndentGuide.activeBackground1': p.purple,
+      'editorIndentGuide.activeBackground2': p.cyan,
+      'editorIndentGuide.activeBackground3': p.orange,
+      'editorIndentGuide.activeBackground4': p.red,
+      'editorIndentGuide.activeBackground5': p.blue,
+      'editorIndentGuide.activeBackground6': p.green,
       'editorRuler.foreground': p.border,
       'editorCodeLens.foreground': p.fgSecondary,
       'editorBracketMatch.background': withAlpha(p.fgSecondary, '55'),
@@ -170,21 +182,39 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       'editorGutter.modifiedBackground': p.info,
       'editorGutter.addedBackground': p.success,
       'editorGutter.deletedBackground': p.error,
+      'editorBracketHighlight.foreground1': p.purple,
+      'editorBracketHighlight.foreground2': p.cyan,
+      'editorBracketHighlight.foreground3': p.orange,
+      'editorBracketHighlight.foreground4': p.red,
+      'editorBracketHighlight.foreground5': p.blue,
+      'editorBracketHighlight.foreground6': p.green,
+      'editorBracketPairGuide.background1': withAlpha(p.purple, '33'),
+      'editorBracketPairGuide.background2': withAlpha(p.cyan, '33'),
+      'editorBracketPairGuide.background3': withAlpha(p.orange, '33'),
+      'editorBracketPairGuide.background4': withAlpha(p.red, '33'),
+      'editorBracketPairGuide.background5': withAlpha(p.blue, '33'),
+      'editorBracketPairGuide.background6': withAlpha(p.green, '33'),
+      'editorBracketPairGuide.activeBackground1': p.purple,
+      'editorBracketPairGuide.activeBackground2': p.cyan,
+      'editorBracketPairGuide.activeBackground3': p.orange,
+      'editorBracketPairGuide.activeBackground4': p.red,
+      'editorBracketPairGuide.activeBackground5': p.blue,
+      'editorBracketPairGuide.activeBackground6': p.green,
       'diffEditor.insertedTextBackground': withAlpha(p.success, '22'),
       'diffEditor.insertedTextBorder': withAlpha(p.success, '44'),
       'diffEditor.removedTextBackground': withAlpha(p.error, '22'),
       'diffEditor.removedTextBorder': withAlpha(p.error, '44'),
       'diffEditor.border': p.border,
-      'editorWidget.background': p.bgWidget,
-      'editorWidget.border': p.bgDark,
-      'editorSuggestWidget.background': p.border,
+      'editorWidget.background': p.bgDark,
+      'editorWidget.border': p.border,
+      'editorSuggestWidget.background': p.bgDark,
       'editorSuggestWidget.border': p.border,
       'editorSuggestWidget.foreground': p.fgSecondary,
       'editorSuggestWidget.highlightForeground': a,
       'editorSuggestWidget.selectedBackground': p.bgEditor,
-      'editorHoverWidget.background': p.border,
+      'editorHoverWidget.background': p.bgDark,
       'editorHoverWidget.border': p.border,
-      'debugExceptionWidget.background': p.border,
+      'debugExceptionWidget.background': p.bgDark,
       'debugExceptionWidget.border': p.border,
       'editorMarkerNavigation.background': p.border,
       'editorMarkerNavigationError.background': p.error,
@@ -228,10 +258,10 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       'statusBar.background': p.bgDark,
       'statusBar.foreground': p.fgSecondary,
       'statusBar.border': structuralBorder,
-      'statusBar.debuggingBackground': p.bgDark,
-      'statusBar.debuggingForeground': p.fgSecondary,
-      'statusBar.noFolderBackground': p.bgDark,
-      'statusBar.noFolderForeground': p.fgSecondary,
+      'statusBar.debuggingBackground': p.red,
+      'statusBar.debuggingForeground': p.bgDark,
+      'statusBar.noFolderBackground': a,
+      'statusBar.noFolderForeground': p.bgDark,
       'statusBarItem.activeBackground': p.border,
       'statusBarItem.hoverBackground': p.bgHover,
       'statusBarItem.remoteBackground': p.bgDark,
@@ -259,6 +289,9 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       'extensionButton.prominentHoverBackground': withAlpha(a, '99'),
       'pickerGroup.border': p.border,
       'pickerGroup.foreground': a,
+      'quickInput.background': p.bgDark,
+      'quickInput.foreground': p.fgSecondary,
+      'quickInputList.focusBackground': p.border,
       'terminal.background': p.bgDark,
       'terminal.border': p.border,
       'terminal.foreground': p.fgEditor,
@@ -1052,6 +1085,246 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       },
 
       // -----------------------------------------------------------------------
+      // MARKDOWN & DOCUMENTATION
+      // -----------------------------------------------------------------------
+      {
+        name: 'Markdown Heading 1',
+        scope: [
+          'heading.1.markdown',
+          'markup.heading.1.markdown',
+          'heading.1.markdown entity.name.section.markdown',
+          'markup.heading.1.markdown entity.name.section.markdown',
+          'heading.1.markdown punctuation.definition.heading.markdown',
+          'markup.heading.1.markdown punctuation.definition.heading.markdown',
+        ],
+        settings: {
+          foreground: a,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'Markdown Heading 2',
+        scope: [
+          'heading.2.markdown',
+          'markup.heading.2.markdown',
+          'heading.2.markdown entity.name.section.markdown',
+          'markup.heading.2.markdown entity.name.section.markdown',
+          'heading.2.markdown punctuation.definition.heading.markdown',
+          'markup.heading.2.markdown punctuation.definition.heading.markdown',
+        ],
+        settings: {
+          foreground: p.purple,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'Markdown Heading 3',
+        scope: [
+          'heading.3.markdown',
+          'markup.heading.3.markdown',
+          'heading.3.markdown entity.name.section.markdown',
+          'markup.heading.3.markdown entity.name.section.markdown',
+          'heading.3.markdown punctuation.definition.heading.markdown',
+          'markup.heading.3.markdown punctuation.definition.heading.markdown',
+        ],
+        settings: {
+          foreground: p.orange,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'Markdown Heading 4',
+        scope: [
+          'heading.4.markdown',
+          'markup.heading.4.markdown',
+          'heading.4.markdown entity.name.section.markdown',
+          'markup.heading.4.markdown entity.name.section.markdown',
+          'heading.4.markdown punctuation.definition.heading.markdown',
+          'markup.heading.4.markdown punctuation.definition.heading.markdown',
+        ],
+        settings: {
+          foreground: p.red,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'Markdown Heading 5',
+        scope: [
+          'heading.5.markdown',
+          'markup.heading.5.markdown',
+          'heading.5.markdown entity.name.section.markdown',
+          'markup.heading.5.markdown entity.name.section.markdown',
+          'heading.5.markdown punctuation.definition.heading.markdown',
+          'markup.heading.5.markdown punctuation.definition.heading.markdown',
+        ],
+        settings: {
+          foreground: p.blue,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'Markdown Heading 6',
+        scope: [
+          'heading.6.markdown',
+          'markup.heading.6.markdown',
+          'heading.6.markdown entity.name.section.markdown',
+          'markup.heading.6.markdown entity.name.section.markdown',
+          'heading.6.markdown punctuation.definition.heading.markdown',
+          'markup.heading.6.markdown punctuation.definition.heading.markdown',
+        ],
+        settings: {
+          foreground: p.green,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'Markdown Headings General',
+        scope: ['markup.heading', 'markup.heading entity.name'],
+        settings: {
+          foreground: a,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'Markdown Bold',
+        scope: ['markup.bold', 'punctuation.definition.bold.markdown'],
+        settings: {
+          foreground: p.orange,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'Markdown Italic',
+        scope: ['markup.italic', 'punctuation.definition.italic.markdown'],
+        settings: {
+          foreground: p.purple,
+          fontStyle: 'italic',
+        },
+      },
+      {
+        name: 'Markdown Inline Code',
+        scope: 'markup.inline.raw',
+        settings: {
+          foreground: p.green,
+          fontStyle: 'italic',
+        },
+      },
+      {
+        name: 'Markdown Blockquotes',
+        scope: 'markup.quote',
+        settings: {
+          foreground: withAlpha(p.fgSecondary, 'cc'),
+          fontStyle: 'italic',
+        },
+      },
+      {
+        name: 'Markdown Lists',
+        scope: ['markup.list punctuation.definition.list_item', 'markup.list'],
+        settings: {
+          foreground: p.cyan,
+        },
+      },
+      {
+        name: 'Markdown Links',
+        scope: ['markup.underline.link', 'string.other.link'],
+        settings: {
+          foreground: p.blue,
+        },
+      },
+      {
+        name: 'Markdown Link Text',
+        scope: 'string.other.link.title',
+        settings: {
+          foreground: p.green,
+        },
+      },
+
+      // -----------------------------------------------------------------------
+      // LANGUAGE SPECIFIC: CSS / SCSS / LESS
+      // -----------------------------------------------------------------------
+      {
+        name: 'CSS/SCSS Property Name',
+        scope: [
+          'support.type.property-name.css',
+          'support.type.property-name.scss',
+          'support.type.property-name.less',
+        ],
+        settings: {
+          foreground: p.blue,
+        },
+      },
+      {
+        name: 'CSS/SCSS Property Value',
+        scope: [
+          'support.constant.property-value.css',
+          'support.constant.property-value.scss',
+          'support.constant.property-value.less',
+        ],
+        settings: {
+          foreground: p.orange,
+        },
+      },
+      {
+        name: 'CSS/SCSS Units',
+        scope: [
+          'keyword.other.unit.css',
+          'keyword.other.unit.scss',
+          'keyword.other.unit.less',
+        ],
+        settings: {
+          foreground: p.red,
+        },
+      },
+      {
+        name: 'CSS/SCSS ID Selector',
+        scope: 'entity.other.attribute-name.id.css',
+        settings: {
+          foreground: p.orange,
+          fontStyle: 'bold',
+        },
+      },
+      {
+        name: 'CSS/SCSS Class Selector',
+        scope: 'entity.other.attribute-name.class.css',
+        settings: {
+          foreground: p.green,
+        },
+      },
+      {
+        name: 'CSS/SCSS Tag Selector',
+        scope: 'entity.name.tag.css',
+        settings: {
+          foreground: p.red,
+        },
+      },
+      {
+        name: 'CSS/SCSS Pseudo-Class',
+        scope: 'entity.other.attribute-name.pseudo-class.css',
+        settings: {
+          foreground: p.purple,
+          fontStyle: 'italic',
+        },
+      },
+
+      // -----------------------------------------------------------------------
+      // LANGUAGE SPECIFIC: JSON
+      // -----------------------------------------------------------------------
+      {
+        name: 'JSON Property Name',
+        scope: 'support.type.property-name.json',
+        settings: {
+          foreground: p.blue,
+        },
+      },
+      {
+        name: 'JSON Property Value (String)',
+        scope: 'string.quoted.double.json',
+        settings: {
+          foreground: p.yellow,
+        },
+      },
+
+      // -----------------------------------------------------------------------
       // INVALID / DEPRECATED
       // -----------------------------------------------------------------------
       {
@@ -1073,15 +1346,27 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
     ],
     semanticHighlighting: true,
     semanticTokenColors: {
-      variable: p.blue,
-      property: p.blue,
-      parameter: p.orange,
-      function: p.green,
-      class: p.green,
-      type: p.blue,
+      class: p.syntax.function,
       interface: p.blue,
+      enum: p.purple,
+      function: p.syntax.function,
+      variable: p.fgPrimary,
       'variable.readonly': p.orange,
+      parameter: p.syntax.parameter,
+      property: p.blue,
+      comment: p.syntax.comment,
+      string: p.syntax.string,
+      keyword: p.syntax.keyword,
+      number: p.syntax.number,
+      regexp: p.syntax.string,
+      operator: p.red,
+      namespace: p.blue,
+      type: p.blue,
+      struct: p.purple,
+      macro: p.blue,
+      event: p.yellow,
       'property.readonly': p.blue,
+      'parameter.label': p.orange,
     },
   };
 }

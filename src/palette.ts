@@ -72,10 +72,7 @@ export const palette = {
     keyword: colors.red,
     function: colors.green,
     parameter: colors.orange,
-    tag: colors.red,
-    attribute: colors.green,
     constant: colors.purple,
-    text: colors.white,
     diffHeader: colors.textDiffHeader,
   },
 };
