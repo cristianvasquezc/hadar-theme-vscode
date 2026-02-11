@@ -4,6 +4,17 @@ All notable changes to the "hadar-theme-vscode" extension will be documented in 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.0.3] - 2026-02-11
+
+- **New Feature:** Added comprehensive **Debugging** support. New icons and colors for breakpoints, debug actions (start, stop, step), and console messages (info, warning, error) for a better debugging experience.
+- **New Feature:** Added native **Testing API** support. Distinct colors for passed, failed, skipped, and queued tests, along with decorative backgrounds for error messages.
+- **New Feature:** Enhanced **Git Integration**. Added colors for SCM Graph (history items, refs), and expanded Git decorations (renamed, staged, submodules, ignored files).
+- **New Feature:** Added support for **Sticky Scroll**. Context headers now stick to the top of the editor with a subtle background and hover effect.
+- **Improvement:** Added **Minimap** highlights. Find matches, selections, errors, and warnings are now clearly visible in the minimap.
+- **Improvement:** Styled **Keybinding Labels** for better visibility in the UI.
+- **Improvement:** Added **Charts** color palette for extensions that use VS Code's charting library.
+- **Fix:** Corrected author information in `package.json`.
+
 ## [1.0.2] - 2026-02-09
 
 - **New Feature:** Enabled **Semantic Highlighting** for richer and more accurate code coloring. Variables, parameters, interfaces, and properties now have distinct colors based on code intelligence.

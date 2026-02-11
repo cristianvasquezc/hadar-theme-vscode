@@ -205,6 +205,15 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       'diffEditor.border': p.border,
       'editorWidget.background': p.bgDark,
       'editorWidget.border': p.border,
+
+      // Comments View & Widget (Pull Requests)
+      'editorCommentsWidget.resolvedBorder': p.success,
+      'editorCommentsWidget.unresolvedBorder': p.warning,
+      'editorCommentsWidget.rangeBackground': withAlpha(p.border, '22'),
+      'editorCommentsWidget.rangeActiveBackground': withAlpha(p.border, '44'),
+      'editorCommentsWidget.replyInputBackground': p.bgEditor,
+      'commentsView.resolvedIcon': p.success,
+      'commentsView.unresolvedIcon': p.warning,
       'editorSuggestWidget.background': p.bgDark,
       'editorSuggestWidget.border': p.border,
       'editorSuggestWidget.foreground': p.fgSecondary,
@@ -314,12 +323,54 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       'terminalCursor.foreground': a,
       'debugToolBar.background': p.border,
       'debugToolBar.border': p.border,
+      'debugIcon.breakpointForeground': p.error,
+      'debugIcon.breakpointDisabledForeground': withAlpha(p.error, '77'),
+      'debugIcon.breakpointUnverifiedForeground': withAlpha(p.error, '77'),
+      'debugIcon.breakpointCurrentStackframeForeground': p.warning,
+      'debugIcon.breakpointStackframeForeground': p.success,
+      'debugIcon.startForeground': p.green,
+      'debugIcon.pauseForeground': p.orange,
+      'debugIcon.stopForeground': p.error,
+      'debugIcon.disconnectForeground': p.error,
+      'debugIcon.restartForeground': p.success,
+      'debugIcon.stepOverForeground': p.blue,
+      'debugIcon.stepIntoForeground': p.purple,
+      'debugIcon.stepOutForeground': p.purple,
+      'debugIcon.continueForeground': p.green,
+      'debugIcon.stepBackForeground': p.blue,
+      'debugConsole.infoForeground': p.info,
+      'debugConsole.warningForeground': p.warning,
+      'debugConsole.errorForeground': p.error,
+      'debugConsole.sourceForeground': p.fgSecondary,
+      'debugConsoleInputIcon.foreground': a,
+
+      // Testing Colors (Test Explorer)
+      'testing.iconPassed': p.success,
+      'testing.iconFailed': p.error,
+      'testing.iconErrored': p.error,
+      'testing.iconSkipped': withAlpha(p.fgSecondary, '77'),
+      'testing.iconQueued': p.warning,
+      'testing.iconUnset': withAlpha(p.fgSecondary, '77'),
+      'testing.runAction': p.success,
+      'testing.peekBorder': p.error,
+      'testing.message.error.decorationForeground': p.error,
+      'testing.message.error.lineBackground': withAlpha(p.error, '22'),
+      'testing.message.info.decorationForeground': p.info,
+      'testing.message.info.lineBackground': withAlpha(p.info, '22'),
+
+      // Chart Colors (Used in Settings editor, etc)
+      'charts.foreground': p.fgSecondary,
+      'charts.lines': withAlpha(p.fgSecondary, '55'),
+      'charts.red': p.red,
+      'charts.blue': p.blue,
+      'charts.yellow': p.yellow,
+      'charts.orange': p.orange,
+      'charts.green': p.green,
+      'charts.purple': p.purple,
+
       'walkThrough.embeddedEditorBackground': p.bgDark,
-      'gitDecoration.modifiedResourceForeground': p.info,
-      'gitDecoration.deletedResourceForeground': p.error,
-      'gitDecoration.untrackedResourceForeground': p.success,
-      'gitDecoration.ignoredResourceForeground': withAlpha(p.fgSecondary, '77'),
-      'gitDecoration.conflictingResourceForeground': p.error,
+
+      // Settings Editor
       'settings.headerForeground': p.fgSecondary,
       'settings.modifiedItemIndicator': p.info,
       'settings.dropdownBackground': p.bgEditor,
@@ -340,6 +391,58 @@ export function generateTheme(accentColor: string, bordered: boolean = false) {
       'breadcrumb.focusForeground': p.fgSecondary,
       'breadcrumb.activeSelectionForeground': p.fgSecondary,
       'breadcrumbPicker.background': p.bgDark,
+
+      // Sticky Scroll
+      'editorStickyScroll.background': p.bgEditor,
+      'editorStickyScrollHover.background': withAlpha(p.border, '33'),
+
+      // Inlay Hints
+      'editorInlayHint.foreground': withAlpha(p.fgSecondary, '99'),
+      'editorInlayHint.background': withAlpha(p.border, '33'),
+      'editorInlayHint.typeForeground': withAlpha(p.fgSecondary, '99'),
+
+      // Minimap
+      'minimap.findMatchHighlight': withAlpha(a, '55'),
+      'minimap.selectionHighlight': withAlpha(p.fgSecondary, '33'),
+      'minimap.errorHighlight': p.error,
+      'minimap.warningHighlight': p.warning,
+
+      // Command Center
+      'commandCenter.background': p.bgDark,
+      'commandCenter.border': p.border,
+      'commandCenter.activeBackground': p.bgEditor,
+      'commandCenter.foreground': p.fgSecondary,
+
+      // Keybinding Label
+      'keybindingLabel.background': withAlpha(p.fgSecondary, '22'),
+      'keybindingLabel.foreground': p.fgSecondary,
+      'keybindingLabel.border': withAlpha(p.fgSecondary, '44'),
+      'keybindingLabel.bottomBorder': withAlpha(p.fgSecondary, '44'),
+
+      // Source Control Graph (Nativo de VS Code - Nuevo)
+      'scmGraph.historyItemHoverAdditionsForeground': p.success,
+      'scmGraph.historyItemHoverDeletionsForeground': p.error,
+      'scmGraph.historyItemRefColor': a,
+      'scmGraph.historyItemRemoteRefColor': p.purple,
+      'scmGraph.historyItemBaseRefColor': p.orange,
+      'scmGraph.historyItemHoverLabelForeground': p.bgDark,
+      'scmGraph.foreground1': a,
+      'scmGraph.foreground2': p.purple,
+      'scmGraph.foreground3': p.orange,
+      'scmGraph.foreground4': p.blue,
+      'scmGraph.foreground5': p.green,
+
+      // Git Colors (Conflictos y estados)
+      'gitDecoration.addedResourceForeground': p.success,
+      'gitDecoration.modifiedResourceForeground': p.info,
+      'gitDecoration.deletedResourceForeground': p.error,
+      'gitDecoration.renamedResourceForeground': p.orange,
+      'gitDecoration.stageModifiedResourceForeground': p.info,
+      'gitDecoration.stageDeletedResourceForeground': p.error,
+      'gitDecoration.untrackedResourceForeground': p.success,
+      'gitDecoration.ignoredResourceForeground': withAlpha(p.fgSecondary, '55'),
+      'gitDecoration.conflictingResourceForeground': p.red,
+      'gitDecoration.submoduleResourceForeground': p.blue,
     },
     tokenColors: [
       // -----------------------------------------------------------------------

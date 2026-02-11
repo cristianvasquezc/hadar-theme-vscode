@@ -72,11 +72,13 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run package",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "build": "tsc -p ./ && node out/build-themes.js",
-    "package": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --minify"
+    "vscode:prepublish": "npm run build",
+    "build": "npm run compile && node out/build-themes.js",
+    "package": "vsce package",
+    "compile": "npm run bundle-extension && npm run bundle-themes",
+    "bundle-extension": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --minify",
+    "bundle-themes": "esbuild ./src/build-themes.ts --bundle --outfile=out/build-themes.js --platform=node --format=cjs",
+    "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
     "@types/node": "^25.2.1",
