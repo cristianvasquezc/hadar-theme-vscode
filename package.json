@@ -2,7 +2,7 @@
   "name": "hadar-theme",
   "displayName": "Hadar Theme",
   "description": "Optimiza tu entorno en Visual Studio Code con Hadar Theme. Un tema oscuro sofisticado con colores intensos y cuidadosamente seleccionados para resaltar la sintaxis, mejorar la legibilidad y ofrecerte comodidad en proyectos de cualquier escala.",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "publisher": "cristianvasquez",
   "icon": "images/logo.png",
   "author": {
